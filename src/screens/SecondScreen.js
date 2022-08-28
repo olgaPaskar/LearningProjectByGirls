@@ -18,7 +18,7 @@ const SecondScreen = () => {
           uri: 'https://st2.depositphotos.com/6840962/11053/v/950/depositphotos_110532722-stock-illustration-no-dog-pooping-signs-black.jpg',
         }}
       />
-      <Text style={styles.textStyles}>Привет {route.params.message}</Text>
+      <Text style={styles.textStyles}>Hello {route.params.message}</Text>
       <Button title="Back" onPress={buttonHandler} />
     </View>
   );
