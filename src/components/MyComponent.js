@@ -2,7 +2,6 @@ import React from 'react';
 import {Image, StyleSheet, Text, View} from 'react-native';
 
 export const MyComponent = props => {
-  console.warn(props.image);
   return (
     <View style={styles.container}>
       <Text>
