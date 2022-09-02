@@ -20,6 +20,8 @@ const FirstScreen = () => {
         navigation.navigate('SecondScreen', {message});
     };
 
+    console.warn(userData)
+
     useEffect(() => {
         getUserData();
     }, []);
@@ -60,6 +62,7 @@ const FirstScreen = () => {
     const renderItem = ({item}) => {
         return (
             <UserDataItem
+                username={item.username}
                 name={item.name}
                 email={item.email}
                 address={item.address}

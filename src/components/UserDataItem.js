@@ -6,11 +6,12 @@ export const UserDataItem = props => {
 
         <View style={styles.container}>
             <TouchableOpacity onPress={props.onPress} style={styles.touchableContainer}>
-                <Text style={styles.nameLabel}>{props.name}</Text>
+                <Text style={styles.nameLabel}>{props.username}</Text>
             </TouchableOpacity>
             {props.visible && (
                 <View style={styles.padding}>
                     <View style={styles.infoContainer}>
+                        <Text>{props.name}</Text>
                         <Text>{props.email}</Text>
                         <Text>{props.address.city}</Text>
                         <Text>{props.geo}</Text>
