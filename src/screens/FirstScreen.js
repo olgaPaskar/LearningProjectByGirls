@@ -60,7 +60,6 @@ const FirstScreen = () => {
     const renderItem = ({item}) => {
         return (
             <UserDataItem
-
                 name={item.name}
                 email={item.email}
                 address={item.address}
@@ -69,7 +68,7 @@ const FirstScreen = () => {
                 website={item.website}
                 company={item.company}
                 onPress={() => handleItemPress(item.id)}
-                isShow={item.visible}
+                visible={item.visible}
             />
         );
     };
@@ -78,7 +77,6 @@ const FirstScreen = () => {
         <View style={styles.container}>
             <Text style={styles.textStyles}>Привет друг!</Text>
             <View style={styles.container}>
-                {/*<Text>{userData?.map(el => el.username)}</Text>*/}
                 <FlatList
                     data={userData}
                     renderItem={renderItem}
@@ -86,9 +84,6 @@ const FirstScreen = () => {
                     showsVerticalScrollIndicator={false}
                 />
             </View>
-            {/*<TouchableOpacity style={styles.buttonContainer} onPress={getUserData}>*/}
-            {/*  <Text>Passing</Text>*/}
-            {/*</TouchableOpacity>*/}
             <TextInput
                 placeholder="Введите Ваше имя"
                 value={message}
